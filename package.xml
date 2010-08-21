@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package packagerversion="1.9.0" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0
+    http://pear.php.net/dtd/tasks-1.0.xsd
+    http://pear.php.net/dtd/package-2.0
+    http://pear.php.net/dtd/package-2.0.xsd">
+ <name>Text_Parser_BNF</name>
+ <channel>pear.sergiocarvalho.com</channel>
+ <summary>Parser class for parsing Backus-Naur form grammars</summary>
+ <description>Text_Parser_BNF is a parser for grammar descriptions written in Backus-Naur form. Given a description of a grammar, Text_Parser_BNF outputs a Structures_Grammar instance functionally equivalent to the described grammar, and suitable to being fed into Text_Parser_Generator.</description>
+ <lead>
+  <name>Sergio Carvalho</name>
+  <user>sergiosgc</user>
+  <email>sergiosgc@php.net</email>
+  <active>yes</active>
+ </lead>
+ <date>2010-08-20</date>
+ <time>21:02:18</time>
+ <version>
+  <release>0.2.0</release>
+  <api>0.1.0</api>
+ </version>
+ <stability>
+  <release>beta</release>
+  <api>alpha</api>
+ </stability>
+ <license uri="http://www.php.net/license/3_01.txt">PHP License 3.01</license>
+ <notes>
+* Initial version
+ </notes>
+ <contents>
+  <dir baseinstalldir="/" name="/">
+   <dir name="tests">
+    <dir name="inputs">
+     <file name="bnf.txt" role="test" />
+     <file name="infix.txt" role="test" />
+    </dir> <!-- /tests/inputs -->
+    <file name="Dogfood-lex.phpt" role="test" />
+    <file name="Dogfood-parse.phpt" role="test" />
+    <file name="Infix-lex.phpt" role="test" />
+    <file name="Infix.phpt" role="test" />
+   </dir> <!-- /tests -->
+   <dir name="Text">
+    <dir name="Parser">
+     <dir name="BNF">
+      <file name="Grammar.php" role="php" />
+      <file name="Tokenizer.php" role="php" />
+     </dir> <!-- /Text/Parser/BNF -->
+     <file name="BNF.php" role="php" />
+    </dir> <!-- /Text/Parser -->
+   </dir> <!-- /Text -->
+   <file name="generate.php" role="php" />
+  </dir> <!-- / -->
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.1.0</min>
+   </php>
+   <pearinstaller>
+    <min>1.5.4</min>
+   </pearinstaller>
+  </required>
+ </dependencies>
+ <phprelease />
+ <changelog>
+  <release>
+   <version>
+    <release>0.2.0</release>
+    <api>0.1.0</api>
+   </version>
+   <stability>
+    <release>beta</release>
+    <api>alpha</api>
+   </stability>
+   <date>2010-08-20</date>
+   <license uri="http://www.php.net/license/3_01.txt">PHP License 3.01</license>
+   <notes>
+* Initial version
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.1.0</release>
+    <api>0.1.0</api>
+   </version>
+   <stability>
+    <release>alpha</release>
+    <api>alpha</api>
+   </stability>
+   <date>2008-05-06</date>
+   <license uri="http://www.php.net/license/3_01.txt">PHP License 3.01</license>
+   <notes>
+* Initial version
+   </notes>
+  </release>
+ </changelog>
+</package>
