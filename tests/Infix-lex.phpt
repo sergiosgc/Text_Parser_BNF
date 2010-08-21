@@ -78,9 +78,6 @@ Lexer output token {<text-terminal>, ';'}
 Lexer output token {<EOL>, '\n'}
 Lexer output token {>>>, '>>>'}
 Lexer output token {<EOL>, '\n'}
-Lexer output token {<EOL>, '\n'}
-Lexer output token {<EOL>, '\n'}
-Lexer output token {<EOL>, '\n'}
 Lexer output token { , ' '}
 Lexer output token {<, '<'}
 Lexer output token {<text-terminal>, 'sum'}
@@ -113,10 +110,6 @@ Lexer output token {), ')'}
 Lexer output token {<text-terminal>, ';'}
 Lexer output token {<EOL>, '\n'}
 Lexer output token {>>>, '>>>'}
-Lexer output token {<EOL>, '\n'}
-Lexer output token {<EOL>, '\n'}
-Lexer output token {<EOL>, '\n'}
-Lexer output token {<EOL>, '\n'}
 Lexer output token {<EOL>, '\n'}
 Lexer output token { , ' '}
 Lexer output token {<, '<'}
@@ -166,9 +159,6 @@ Lexer output token {<text-terminal>, ';'}
 Lexer output token {<EOL>, '\n'}
 Lexer output token {>>>, '>>>'}
 Lexer output token {<EOL>, '\n'}
-Lexer output token {<EOL>, '\n'}
-Lexer output token {<EOL>, '\n'}
-Lexer output token {<EOL>, '\n'}
 Lexer output token { , ' '}
 Lexer output token {<, '<'}
 Lexer output token {<text-terminal>, 'product'}
@@ -197,8 +187,6 @@ Lexer output token {), ')'}
 Lexer output token {<text-terminal>, ';'}
 Lexer output token {<EOL>, '\n'}
 Lexer output token {>>>, '>>>'}
-Lexer output token {<EOL>, '\n'}
-Lexer output token {<EOL>, '\n'}
 Lexer output token {<EOL>, '\n'}
 Lexer output token { , ' '}
 Lexer output token {<, '<'}
@@ -231,11 +219,7 @@ Lexer output token {(, '('}
 Lexer output token {), ')'}
 Lexer output token {<text-terminal>, ';'}
 Lexer output token {<EOL>, '\n'}
-Lexer output token {<EOL>, '\n'}
-Lexer output token {<EOL>, '\n'}
 Lexer output token {>>>, '>>>'}
-Lexer output token {<EOL>, '\n'}
-Lexer output token {<EOL>, '\n'}
 Lexer output token {<EOL>, '\n'}
 Lexer output token { , ' '}
 Lexer output token {<, '<'}
@@ -288,8 +272,6 @@ Lexer output token {), ')'}
 Lexer output token {<text-terminal>, ';'}
 Lexer output token {<EOL>, '\n'}
 Lexer output token {>>>, '>>>'}
-Lexer output token {<EOL>, '\n'}
-Lexer output token {<EOL>, '\n'}
 Lexer output token {<EOL>, '\n'}
 Lexer output token { , ' '}
 Lexer output token {<, '<'}
