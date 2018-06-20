@@ -1,5 +1,5 @@
 {
-    "name": "sergiosgc/Text_Parser_BNF",
+    "name": "sergiosgc/text_parser_bnf",
     "description": "Text_Parser_BNF is a parser for grammar descriptions written in Backus-Naur form. Given a description of a grammar, Text_Parser_BNF outputs a Structures_Grammar instance functionally equivalent to the described grammar, and suitable to being fed into Text_Parser_Generator.",
     "keywords": ["parser", "grammar", "bnf"],
     "type": "library",
