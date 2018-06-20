@@ -1,20 +1,20 @@
-   <S>                   ::= <syntax>
-   <syntax>              ::= <rule> | <rule> <syntax>
-   <rule>                ::= <opt-whitespace> "<" <rule-name> ">" <opt-whitespace> "::=" <opt-whitespace> <expression> <line-end> <reduction-code>
-   <opt-whitespace>      ::= " " <opt-whitespace> | ""  
-   <expression>          ::= <list> | <list> <opt-whitespace> "|" <opt-whitespace> <expression>
-   <line-end>            ::= <opt-whitespace> <EOL> | <line-end> <line-end>
-   <list>                ::= <term> | <term> <opt-whitespace> <list>
-   <term>                ::= <named-term> | <unnamed-term>
-   <named-term>          ::= <unnamed-term> <opt-whitespace> "(" <unquoted-text> ")"
-   <unnamed-term>        ::= <literal> | "<" <rule-name> ">" | '""'
-   <literal>             ::= '"' <double-quoted-text> '"' | "'" <single-quoted-text> "'"
-   <double-quoted-text>  ::= <quoted-text-part> | "'" | <double-quoted-text> <quoted-text-part> | <double-quoted-text> "'"
-   <single-quoted-text>  ::= <quoted-text-part> | '"' | <single-quoted-text> <quoted-text-part> | <single-quoted-text> '"'
-   <quoted-text-part>    ::= "(" | ")" | "<" | ">" | "::=" | " " | '""' | "|" | <text-terminal> | <quoted-character>
-   <rule-name>           ::= <unquoted-text>
-   <unquoted-text>       ::= <text-terminal> | <quoted-character> | <unquoted-text> <text-terminal> | <unquoted-text> <quoted-character>
-   <reduction-code>      ::= "<<<" <line-end> <reduction-code-text> <EOL> ">>>" <line-end> | ""
-   <reduction-code-text> ::= <reduction-code-text-part>
-   <reduction-code-text> ::= <reduction-code-text-part> <reduction-code-text>
-   <reduction-code-text-part> ::= "<<<" | ">>>" | '"' | "'" | "(" | ")" | "<" | ">" | "::=" | " " | '""' | "|" | <text-terminal> | <quoted-character>
+<S>                   ::= <syntax>
+<syntax>              ::= <rule> | <rule> <syntax>
+<rule>                ::= <opt-whitespace> "<" <rule-name> ">" <opt-whitespace> "::=" <opt-whitespace> <expression> <line-end> <reduction-code>
+<opt-whitespace>      ::= " " <opt-whitespace> | ""  
+<expression>          ::= <list> | <list> <opt-whitespace> "|" <opt-whitespace> <expression>
+<line-end>            ::= <opt-whitespace> <EOL> | <line-end> <line-end>
+<list>                ::= <term> | <term> <opt-whitespace> <list>
+<term>                ::= <named-term> | <unnamed-term>
+<named-term>          ::= <unnamed-term> <opt-whitespace> "(" <unquoted-text> ")"
+<unnamed-term>        ::= <literal> | "<" <rule-name> ">" | '""'
+<literal>             ::= '"' <double-quoted-text> '"' | "'" <single-quoted-text> "'"
+<double-quoted-text>  ::= <quoted-text-part> | "'" | <double-quoted-text> <quoted-text-part> | <double-quoted-text> "'"
+<single-quoted-text>  ::= <quoted-text-part> | '"' | <single-quoted-text> <quoted-text-part> | <single-quoted-text> '"'
+<quoted-text-part>    ::= "(" | ")" | "<" | ">" | "::=" | " " | '""' | "|" | <text-terminal> | <quoted-character>
+<rule-name>           ::= <unquoted-text>
+<unquoted-text>       ::= <text-terminal> | <quoted-character> | <unquoted-text> <text-terminal> | <unquoted-text> <quoted-character>
+<reduction-code>      ::= "<<<" <line-end> <reduction-code-text> <EOL> ">>>" <line-end> | ""
+<reduction-code-text> ::= <reduction-code-text-part>
+<reduction-code-text> ::= <reduction-code-text-part> <reduction-code-text>
+<reduction-code-text-part> ::= "<<<" | ">>>" | '"' | "'" | "(" | ")" | "<" | ">" | "::=" | " " | '""' | "|" | <text-terminal> | <quoted-character>

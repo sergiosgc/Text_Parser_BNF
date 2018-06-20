@@ -1,6 +1,7 @@
 <?php
 /* vim: set expandtab tabstop=4 shiftwidth=4 foldmethod=marker: */
-require_once('Text/Tokenizer/Regex.php');
+namespace sergiosgc;
+
 /**
  * A tokenizer for a BNF parser. Companion to Text_Parser_BNF_Grammar and Text_Parser_BNF
  */

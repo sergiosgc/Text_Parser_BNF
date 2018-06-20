@@ -1,6 +1,6 @@
 <?php
 /* vim: set expandtab tabstop=4 shiftwidth=4 foldmethod=marker: */
-require_once('Structures/Grammar.php');
+namespace sergiosgc;
 
 /**
  * This class represents a BNF grammar. It can be used, with Text_Parser_Generator 
@@ -34,8 +34,6 @@ class Text_Parser_BNF_Grammar extends Structures_Grammar
     public function __construct()
     {
         parent::__construct(true, false);
-        require_once('Structures/Grammar/Rule.php');
-        require_once('Structures/Grammar/Symbol.php');
         $identityFunction =<<<EOS
 \$result = func_get_arg(0)->getValue();
 EOS;
@@ -57,7 +55,6 @@ EOS
         $r = $this->addContextFreeRule('<syntax>',           '<rule>');
         $r->addReductionFunctionSymbolmap(0, '$rule');
         $r->setReductionFunction(<<<EOS
-require_once('Structures/Grammar.php');
 \$result = new Structures_Grammar();
 \$result->setContextFree(false);
 \$result->setRegular(false);
@@ -81,7 +78,6 @@ EOS
         $r->addReductionFunctionSymbolmap(7, '$expression');
         $r->addReductionFunctionSymbolmap(9, '$code');
         $r->setReductionFunction(<<<EOS
-require_once('Structures/Grammar/Symbol.php');
 \$result =& \$expression->getValue();
 \$ruleName = '<' . \$ruleName->getValue() . '>';
 foreach(\$result as \$i => \$rule) {
@@ -106,9 +102,6 @@ EOS
         $r = $this->addContextFreeRule('<expression>',       '<list>');
         $r->addReductionFunctionSymbolmap(0, '$list');
         $r->setReductionFunction(<<<EOS
-require_once('Structures/Grammar/Rule.php');
-require_once('Structures/Grammar/Symbol.php');
-
 \$newRule = new Structures_Grammar_Rule();
 foreach(\$list->getValue() as \$idx => \$term) if (!is_null(\$term)) {
     \$newRule->addSymbolToRight(Structures_Grammar_Symbol::create(\$term['term']));
@@ -121,9 +114,6 @@ EOS
         $r->addReductionFunctionSymbolmap(0, '$expression');
         $r->addReductionFunctionSymbolmap(4, '$list');
         $r->setReductionFunction(<<<EOS
-require_once('Structures/Grammar/Rule.php');
-require_once('Structures/Grammar/Symbol.php');
-
 \$newRule = new Structures_Grammar_Rule();
 foreach(\$list->getValue() as \$idx => \$term) if (!is_null(\$term)) {
     \$newRule->addSymbolToRight(Structures_Grammar_Symbol::create(\$term['term']));

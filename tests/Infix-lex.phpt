@@ -2,16 +2,11 @@
 Lex BNF description in BNF using the BNF lexer
 --FILE--
 <?php
-ini_set('include_path', realpath(dirname(__FILE__) . '/../../Text_Tokenizer') . ':' .
-                        realpath(dirname(__FILE__) . '/../../Text_Tokenizer_Regex') . ':' .
-                        realpath(dirname(__FILE__) . '/../') . ':' .
-                        ini_get('include_path'));
-require_once('Text/Parser/BNF/Tokenizer.php');
-require_once('Text/Tokenizer/Regex/Matcher/Php.php');
+require_once(__DIR__ . '/../vendor/autoload.php');
 
-$tokenizer = new Text_Parser_BNF_Tokenizer(
+$tokenizer = new \sergiosgc\Text_Parser_BNF_Tokenizer(
     file_get_contents(getcwd() . '/inputs/infix.txt'),
-    new Text_Tokenizer_Regex_Matcher_Php());
+    new \sergiosgc\Text_Tokenizer_Regex_Matcher_Php());
 
 while ($token = $tokenizer->getNextToken()) {
     printf("Lexer output token {%s, '%s'}\n", $token->getId(), addcslashes($token->getValue(), "\0..\37!@\177..\377"));

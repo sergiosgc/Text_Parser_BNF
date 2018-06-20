@@ -1,0 +1,53 @@
+{
+    "name": "sergiosgc/Text_Parser_BNF",
+    "description": "Text_Parser_BNF is a parser for grammar descriptions written in Backus-Naur form. Given a description of a grammar, Text_Parser_BNF outputs a Structures_Grammar instance functionally equivalent to the described grammar, and suitable to being fed into Text_Parser_Generator.",
+    "keywords": ["parser", "grammar", "bnf"],
+    "type": "library",
+    "license": "GPLv3",
+    "homepage": "https://github.com/sergiosgc/Text_Parser_BNF",
+    "repositories": [
+        {
+            "url": "https://github.com/sergiosgc/Text_Tokenizer.git",
+            "type": "git"
+        },
+        {
+            "url": "https://github.com/sergiosgc/Text_Tokenizer_Regex.git",
+            "type": "git"
+        },
+        {
+            "url": "https://github.com/sergiosgc/Text_Parser.git",
+            "type": "git"
+        },
+        {
+            "url": "https://github.com/sergiosgc/Text_Parser_Generator.git",
+            "type": "git"
+        },
+        {
+            "url": "https://github.com/sergiosgc/Structures_Grammar.git",
+            "type": "git"
+        }
+    ],
+    "authors":
+    [
+        {
+            "name": "Sérgio Carvalho",
+            "homepage": "https://github.com/sergiosgc"
+        }
+    ],
+    "require":
+    {
+        "php": ">=7.0.0",
+        "sergiosgc/Text_Tokenizer": "dev-master",
+        "sergiosgc/Text_Tokenizer_Regex": "dev-master",
+        "sergiosgc/Text_Parser": "dev-master",
+        "sergiosgc/Text_Parser_Generator": "dev-master",
+        "sergiosgc/Structures_Grammar": "dev-master"
+    },
+    "autoload":
+    {
+        "psr-0":
+        {
+            "sergiosgc\\": "lib/"
+        }
+    }
+}

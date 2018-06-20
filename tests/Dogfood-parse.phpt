@@ -2,24 +2,13 @@
 Parse BNF description in BNF using the BNF parser
 --FILE--
 <?php
-ini_set('include_path', realpath(dirname(__FILE__) . '/../../Text_Tokenizer') . ':' .
-                        realpath(dirname(__FILE__) . '/../../Structures_Grammar') . ':' .
-                        realpath(dirname(__FILE__) . '/../../Text_Parser') . ':' .
-                        realpath(dirname(__FILE__) . '/../../Text_Tokenizer_Regex') . ':' .
-                        realpath(dirname(__FILE__) . '/../') . ':' .
-                        ini_get('include_path'));
-require_once('Structures/Grammar/Symbol.php');
-require_once('Structures/Grammar/Rule.php');
-require_once('Text/Parser/Generator/Item.php');
-require_once('Text/Parser/BNF.php');
-require_once('Text/Parser/BNF/Tokenizer.php');
-require_once('Text/Tokenizer/Regex/Matcher/Php.php');
+require_once(__DIR__ . '/../vendor/autoload.php');
 
-$tokenizer = new Text_Parser_BNF_Tokenizer(
+$tokenizer = new \sergiosgc\Text_Parser_BNF_Tokenizer(
     file_get_contents(getcwd() . '/inputs/bnf.txt'),
-    new Text_Tokenizer_Regex_Matcher_Php());
+    new \sergiosgc\Text_Tokenizer_Regex_Matcher_Php());
 
-$parser = new Text_Parser_BNF($tokenizer);
+$parser = new \sergiosgc\Text_Parser_BNF($tokenizer);
 //$parser->setDebugLevel(10);
 var_dump((string) $parser->parse()->getValue());
 ?>

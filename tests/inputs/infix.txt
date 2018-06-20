@@ -1,29 +1,29 @@
- <S>   ::= <sum>
+<S>   ::= <sum>
  <sum> ::= <product>(a) '\+' <number>(b)
 <<<
 $result = $a->getValue() + $b->getValue();
 >>>
- <sum> ::= <product>(A)
+<sum> ::= <product>(A)
 <<<
 $result = (int) $A->getValue();
 >>>
- <product> ::= <number>(a) '\*' <number>(b)
+<product> ::= <number>(a) '\*' <number>(b)
 <<<
 $result = $a->getValue() * $b->getValue();
 >>>
- <product> ::= <number>(N)
+<product> ::= <number>(N)
 <<<
 $result = $N->getValue();
 >>>
- <number> ::= <digit>(A)
+<number> ::= <digit>(A)
 <<<
 $result = (int) $A->getValue();
 >>>
- <number> ::= <number>(number) <digit>(digit)
+<number> ::= <number>(number) <digit>(digit)
 <<<
 $result = $number->getValue() * 10 + (int) $digit->getValue();
 >>>
- <number> ::= <number>(A) '\.' <digit>(B)
+<number> ::= <number>(A) '\.' <digit>(B)
 <<<
 $result = (float) ((string) $A->getValue() . '.' . (string) $B->getValue());
 >>>
